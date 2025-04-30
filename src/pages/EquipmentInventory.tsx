@@ -50,7 +50,7 @@ const EquipmentInventory = () => {
 
   return (
     <motion.div
-      className="min-h-screen bg-gradient-to-br from-black via-neutral-900 to-black p-4 md:p-6 text-yellow-400"
+      className="min-h-screen bg-gradient-to-br from-black via-neutral-900 to-black p-4 md:p-6 text-white-400"
       initial="hidden"
       animate="visible"
       variants={containerVariants}
@@ -61,7 +61,7 @@ const EquipmentInventory = () => {
           variants={itemVariants}
           className="flex justify-between items-center mb-8"
         >
-          <h1 className="text-3xl font-bold text-yellow-500">
+          <h1 className="text-3xl font-bold text-white-500">
             Equipment Inventory
           </h1>
           <AnimatedButton className="flex items-center gap-2 bg-yellow-500 text-black font-semibold px-4 py-2 rounded-md hover:bg-yellow-400 transition">
@@ -75,27 +75,27 @@ const EquipmentInventory = () => {
           variants={itemVariants}
           className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6"
         >
-          <GlassCard className="text-center bg-black/70 border border-yellow-600 text-yellow-300">
-            <p className="text-sm text-yellow-500">Total Items</p>
+          <GlassCard className="text-center bg-black/70 border border-yellow-600 text-white-300">
+            <p className="text-sm text-white-500">Total Items</p>
             <p className="text-2xl font-bold">{machineCount}</p>
           </GlassCard>
-          <GlassCard className="text-center bg-black/70 border border-yellow-600 text-yellow-300">
-            <p className="text-sm text-yellow-500">Categories</p>
+          <GlassCard className="text-center bg-black/70 border border-yellow-600 text-white-300">
+            <p className="text-sm text-white-500">Categories</p>
             <p className="text-2xl font-bold">12</p>
           </GlassCard>
-          <GlassCard className="text-center bg-black/70 border border-yellow-600 text-yellow-300">
-            <p className="text-sm text-yellow-500">Needing Attention</p>
-            <p className="text-2xl font-bold text-yellow-400">17</p>
+          <GlassCard className="text-center bg-black/70 border border-yellow-600 text-white-300">
+            <p className="text-sm text-white-500">Needing Attention</p>
+            <p className="text-2xl font-bold text-white-400">17</p>
           </GlassCard>
-          <GlassCard className="text-center bg-black/70 border border-yellow-600 text-yellow-300">
-            <p className="text-sm text-yellow-500">Critical Status</p>
+          <GlassCard className="text-center bg-black/70 border border-yellow-600 text-white-300">
+            <p className="text-sm text-white-500">Critical Status</p>
             <p className="text-2xl font-bold text-red-500">5</p>
           </GlassCard>
         </motion.div>
 
         {/* Equipment Table */}
         <motion.div variants={itemVariants}>
-          <GlassCard className="bg-black/60 text-yellow-200 border border-yellow-700">
+          <GlassCard className="bg-black/60 text-white-200 border border-yellow-400">
             <EquipmentTable />
           </GlassCard>
         </motion.div>

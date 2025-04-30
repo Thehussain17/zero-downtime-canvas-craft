@@ -121,7 +121,7 @@ const EquipmentDetails = () => {
                 </div>
                 <div className="col-span-full mt-2">
                   <p className="text-sm text-muted-foreground mb-1">Last Seen Active</p>
-                  <div className="inline-block bg-green-100 dark:bg-green-900/30 px-3 py-1 rounded-full text-sm">
+                  <div className="inline-block bg-green-100 text-green-900 dark:bg-green-900/30 px-3 py-1 rounded-full text-sm">
                     <span className="inline-block h-2 w-2 rounded-full bg-statusGood mr-2"></span>
                     {new Date(equipment.lastSeen).toLocaleString()}
                   </div>
@@ -129,7 +129,7 @@ const EquipmentDetails = () => {
               </div>
 
               <div className="mt-6 flex gap-3">
-                <AnimatedButton className="flex items-center gap-2">
+                <AnimatedButton className="flex items-center gap-2 bg-dark-999 text-white hover:bg-yellow-500" size="sm">
                   <Wrench size={16} />
                   Schedule Maintenance
                 </AnimatedButton>
@@ -222,7 +222,7 @@ const EquipmentDetails = () => {
 
         <motion.div variants={itemVariants}>
           <GlassCard>
-            <div className="flex justify-between items-center mb-4">
+            <div className="flex justify-between bg -dark-1000 items-center mb-4">
               <h2 className="text-lg font-medium">Notes</h2>
               <AnimatedButton variant="outline" size="sm" className="flex items-center gap-2">
                 <Plus size={14} />
@@ -234,7 +234,7 @@ const EquipmentDetails = () => {
               {equipment.notes.map((note: any, index: number) => (
                 <motion.div 
                   key={note.id}
-                  className="bg-white/70 dark:bg-[#2a2d33] p-4 rounded-md"
+                  className="bg-dark/70 dark:bg-[#2a2d33] p-4 rounded-md"
                   initial={{ opacity: 0, y: 10 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: index * 0.1 }}

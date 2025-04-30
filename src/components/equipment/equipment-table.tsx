@@ -45,23 +45,23 @@ export function EquipmentTable() {
     <div>
       <div className="flex flex-col md:flex-row justify-between gap-4 mb-6">
         <div className="relative flex-1">
-          <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-yellow-400" size={18} />
+          <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-white-400" size={18} />
           <Input
             placeholder="Search equipment..."
-            className="pl-10 bg-black text-yellow-300 border border-yellow-600 focus:ring-yellow-500"
+            className="pl-10 bg-black text-white-300 border border-yellow-600"
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
           />
         </div>
         
         <div className="flex gap-2">
-          <Button variant="outline" className="flex items-center gap-2 bg-black text-yellow-400 border border-yellow-600 hover:bg-yellow-500">
+          <Button variant="outline" className="flex items-center gap-2 bg-black text-white-400 border border-yellow-600 hover:bg-yellow-100">
             <Filter size={16} />
             Filter
           </Button>
           
           <select
-            className="rounded-md border border-yellow-600 bg-black text-yellow-300 px-3 py-2"
+            className="rounded-md border border-yellow-600 bg-black text-white-300 px-3 py-2"
             value={selectedCategory}
             onChange={(e) => setSelectedCategory(e.target.value)}
           >
@@ -75,7 +75,7 @@ export function EquipmentTable() {
       <div className="rounded-lg overflow-hidden border border-yellow-600">
         <div className="overflow-x-auto">
           <table className="w-full">
-            <thead className="bg-black text-yellow-300 text-sm">
+            <thead className="bg-black text-white-300 text-sm">
               <tr>
                 <th className="px-4 py-3 text-left">Name</th>
                 <th className="px-4 py-3 text-left">Category</th>
@@ -89,7 +89,7 @@ export function EquipmentTable() {
               {filteredEquipment.map((item, index) => (
                 <motion.tr
                   key={item.id}
-                  className="border-b border-yellow-600 cursor-pointer hover:bg-yellow-500 bg-black text-yellow-300"
+                  className="border-b border-yellow-600 cursor-pointer hover:bg-yellow-500 bg-black text-white-300"
                   onClick={() => handleRowClick(item.id)}
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
@@ -128,7 +128,7 @@ export function EquipmentTable() {
               
               {filteredEquipment.length === 0 && (
                 <tr>
-                  <td colSpan={6} className="px-4 py-8 text-center text-yellow-400">
+                  <td colSpan={6} className="px-4 py-8 text-center text-white-400">
                     No equipment found matching your search.
                   </td>
                 </tr>
