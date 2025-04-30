@@ -16,6 +16,7 @@ import ChatBot from "@/components/chatbot/ChatBot";
 import MaintenanceDashboard from "./pages/MaintenanceDashboard";
 import Calendar from "./pages/Calendar";
 import { CalendarProvider } from "@/context/CalendarContext"
+import WorkOrder from "./pages/WorkOrder";
 
 const queryClient = new QueryClient();
 
@@ -37,7 +38,7 @@ const App = () => (
             <Route path="/equipment/:id" element={<EquipmentDetails />} />
             {/* Add more routes as they are implemented */}
             <Route path="/maintenance" element={<MaintenanceDashboard />} />
-            <Route path="/work-orders" element={<NotFound />} />
+            <Route path="/work-orders" element={<WorkOrder />} />
             <Route path="/chat" element={<ChatBot />} />
             <Route path="/monitoring" element={<NotFound />} />
             <Route path="/schedule" element={<CalendarProvider><Calendar /></CalendarProvider>} />

@@ -117,7 +117,7 @@ const styles: { [key: string]: React.CSSProperties } = {
     padding: "10px",
     fontSize: "16px",
     borderRadius: "6px",
-    border: "1px solid #FFD70066",
+    border: "1px solidrgba(255, 255, 255, 0.79)",
     backgroundColor: "#2c2c2c",
     color: "#FFD700",
   },
