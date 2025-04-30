@@ -12,6 +12,10 @@ import Dashboard from "@/pages/Dashboard";
 import EquipmentInventory from "@/pages/EquipmentInventory";
 import EquipmentDetails from "@/pages/EquipmentDetails";
 import NotFound from "@/pages/NotFound";
+import ChatBot from "@/components/chatbot/ChatBot";
+import MaintenanceDashboard from "./pages/MaintenanceDashboard";
+import Calendar from "./pages/Calendar";
+import { CalendarProvider } from "@/context/CalendarContext"
 
 const queryClient = new QueryClient();
 
@@ -32,11 +36,11 @@ const App = () => (
             <Route path="/equipment" element={<EquipmentInventory />} />
             <Route path="/equipment/:id" element={<EquipmentDetails />} />
             {/* Add more routes as they are implemented */}
-            <Route path="/maintenance" element={<NotFound />} />
+            <Route path="/maintenance" element={<MaintenanceDashboard />} />
             <Route path="/work-orders" element={<NotFound />} />
-            <Route path="/analytics" element={<NotFound />} />
+            <Route path="/chat" element={<ChatBot />} />
             <Route path="/monitoring" element={<NotFound />} />
-            <Route path="/schedule" element={<NotFound />} />
+            <Route path="/schedule" element={<CalendarProvider><Calendar /></CalendarProvider>} />
             <Route path="/users" element={<NotFound />} />
             <Route path="/settings" element={<NotFound />} />
           </Route>

@@ -88,7 +88,7 @@ const Dashboard = () => {
             value={loading ? "—" : machineCount} 
             loading={loading}
             status="success"
-            theme="yellow-black"
+            
           />
           <SummaryCard 
             title="Health Status" 
@@ -97,7 +97,7 @@ const Dashboard = () => {
             status="success"
             trend="up"
             trendValue="2.3% from last month"
-            theme="yellow-black"
+            
           />
           <SummaryCard 
             title="Active Equipment" 
@@ -109,25 +109,25 @@ const Dashboard = () => {
             }
             trend="down"
             trendValue="3 fewer than yesterday"
-            theme="yellow-black"
+            
           />
           <SummaryCard 
             title="Maintenance Due" 
             value={loading ? "—" : "12"} 
             loading={loading}
             status="warning"
-            theme="yellow-black"
+            
           />
         </motion.div>
 
         {/* Charts and Calendar */}
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
           <motion.div variants={itemVariants} className="lg:col-span-2">
-            <DowntimeChart theme="yellow-black" />
+            <DowntimeChart  />
           </motion.div>
           
           <motion.div variants={itemVariants}>
-            <CalendarPreview theme="yellow-black" />
+            <CalendarPreview  />
           </motion.div>
         </div>
 

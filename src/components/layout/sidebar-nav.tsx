@@ -6,7 +6,7 @@ import {
   Home, 
   Database, 
   Wrench, 
-  BarChart3, 
+  BotMessageSquare, 
   Users, 
   FileText, 
   Gauge, 
@@ -36,11 +36,11 @@ export function SidebarNav({ role = "viewer", collapsed, toggleCollapsed }: Side
     { name: "Equipment", icon: Database, path: "/equipment" },
     { name: "Maintenance", icon: Wrench, path: "/maintenance" },
     { name: "Work Orders", icon: FileText, path: "/work-orders" },
-    { name: "Analytics", icon: BarChart3, path: "/analytics" },
-    { name: "Monitoring", icon: Gauge, path: "/monitoring" },
+    { name: "ChatBot", icon: BotMessageSquare, path: "/chat" },
+    
     { name: "Schedule", icon: Calendar, path: "/schedule" },
-    { name: "Users", icon: Users, path: "/users", adminOnly: true },
-    { name: "Settings", icon: Settings, path: "/settings" },
+    
+    
   ];
 
   const filteredItems = navItems.filter(item => {
@@ -69,9 +69,9 @@ export function SidebarNav({ role = "viewer", collapsed, toggleCollapsed }: Side
               className="flex items-center gap-2"
             >
               <div className="w-8 h-8 bg-yellow-400 rounded-md flex items-center justify-center">
-                <span className="text-black font-bold">ZD</span>
+                <span className="text-black font-bold">FX</span>
               </div>
-              <h1 className="font-semibold text-white">Zero Downtime</h1>
+              <h1 className="font-semibold text-white">Flexion</h1>
             </motion.div>
           )}
           <button
@@ -119,7 +119,7 @@ export function SidebarNav({ role = "viewer", collapsed, toggleCollapsed }: Side
                 animate={{ opacity: 1 }}
                 className="flex flex-col"
               >
-                <span className="text-sm font-medium text-white">John Doe</span>
+                <span className="text-sm font-medium text-white">Prashant Goundadkar</span>
                 <RoleBadge role={role} className="mt-1" />
               </motion.div>
             )}
