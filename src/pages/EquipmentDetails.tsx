@@ -66,7 +66,7 @@ const EquipmentDetails = () => {
 
   if (loading) {
     return (
-      <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-100 to-blue-50 dark:from-neutral-900 dark:to-[#1a1c20]">
+      <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-black-100 to-yellow-50 dark:from-neutral-900 dark:to-[#1a1c20]">
         <motion.div 
           animate={{ rotate: 360 }}
           transition={{ repeat: Infinity, duration: 2, ease: "linear" }}
@@ -78,7 +78,7 @@ const EquipmentDetails = () => {
 
   return (
     <motion.div 
-      className="min-h-screen bg-gradient-to-br from-gray-100 to-blue-50 dark:from-neutral-900 dark:to-[#1a1c20] p-4 md:p-6"
+      className="min-h-screen bg-gradient-to-br from-black-100 to-yellow-50 dark:from-neutral-900 dark:to-[#1a1c20] p-4 md:p-6"
       initial="hidden"
       animate="visible"
       variants={containerVariants}
