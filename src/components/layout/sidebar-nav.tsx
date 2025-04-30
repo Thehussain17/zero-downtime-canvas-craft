@@ -39,8 +39,8 @@ export function SidebarNav({ role = "viewer", collapsed, toggleCollapsed }: Side
     { name: "ChatBot", icon: BotMessageSquare, path: "/chat" },
     
     { name: "Schedule", icon: Calendar, path: "/schedule" },
-    
-    
+    { name: "Users", icon: Users, path: "/users", adminOnly: true },
+    { name: "Settings", icon: Settings, path: "/settings" },
   ];
 
   const filteredItems = navItems.filter(item => {
@@ -111,7 +111,7 @@ export function SidebarNav({ role = "viewer", collapsed, toggleCollapsed }: Side
         <div className="p-4 border-t border-yellow-500">
           <div className="flex items-center gap-3">
             <div className="w-8 h-8 rounded-full bg-yellow-400 text-black flex items-center justify-center font-bold">
-              JD
+              PG
             </div>
             {!collapsed && (
               <motion.div 
